@@ -7,3 +7,15 @@ func Sum(nums []int) int {
 	}
 	return sum
 }
+
+func SumAll(numbersToSum ...[]int) []int {
+	var ans []int
+	for _, arr := range numbersToSum {
+		sum := 0
+		for _, ele := range arr {
+			sum += ele
+		}
+		ans = append(ans, sum)
+	}
+	return ans
+}
